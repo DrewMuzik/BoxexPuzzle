@@ -5,12 +5,14 @@ create a 2-d array given size n
 </br>
 ###  Example if n = 3
 </br>
-
+<pre>
 soln = 3 3 3 3 3 
        3 2 2 2 3
        3 2 1 2 3 
        3 2 2 2 3
        3 3 3 3 3 
+ </pre>
+ 
  </br>
 
 ### Approach taken = fill up the array in "boxes"
