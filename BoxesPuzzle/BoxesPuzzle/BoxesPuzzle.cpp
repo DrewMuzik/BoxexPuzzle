@@ -50,7 +50,7 @@ int main()
 	for(int i = 0; i < length; i++){
 		free(arr[i])	
 	}
-	free(arr)
+	free(arr);
 		
 	return 0;
 }
