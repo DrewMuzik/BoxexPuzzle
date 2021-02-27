@@ -23,25 +23,7 @@ int main()
 	}
 
 	// fill up matrix in "boxes" -> less optimal from frequent array access
-	// in favor of intuitive functionality
-
-	/* sample to fill up by "boxes" w/ n = 3
-			for(int i = 0; i < length; i++){
-			arr[0][i] = n;          // fill first row
-			arr[i][length-1] = n;     // fill last column
-			arr[length-1][i] = n;     // fill last row
-			arr[i][0] = n;          // fill first column
-		}
-		for(int i = 1; i < length - 1; i++){
-			arr[1][i] = n - 1;       // fill first row
-			arr[i][length-2] = n-1;     // fill last column
-			arr[length-2][i] = n-1;     // fill last row
-			arr[i][1] = n-1;          // fill first column
-		}
-
-		arr[n-1][n-1] = n - 2;
-	*/
-
+	// in favor of intuitiveness
 
 	int sub = 0;
 	int box = 0;
@@ -64,7 +46,12 @@ int main()
 		printf("\n");
 	}
 
-
+	// free up memory
+	for(int i = 0; i < length; i++){
+		free(arr[i])	
+	}
+	free(arr)
+		
 	return 0;
 }
 
